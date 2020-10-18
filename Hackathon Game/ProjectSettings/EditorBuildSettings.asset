@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/ScottSweep.unity
+    path: Assets/Scenes/Working Scenes/ScottSweep.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Main Scenes/Menu.unity
     guid: f6e67ccb735c0674a94389d59a4f21cf
   - enabled: 1
-    path: Assets/Scenes/Main.unity
+    path: Assets/Scenes/Main Scenes/HowPlay.unity
+    guid: 80a074237c6ae5649b23198978a64752
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Main.unity
     guid: 836d08a4857623541aa4b56ec17ae8b1
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/Main Scenes/GameOver.unity
     guid: d89e8c313c6b790489d9c4b734db02ae
   m_configObjects: {}
