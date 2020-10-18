@@ -13,10 +13,14 @@ public class GameManager : MonoBehaviour
     private List<Vector3> Spawns;
     private bool GameOver = false;
     private bool Spawnable = false;
+    public bool civSaved = false;
+   
+
     // Start is called before the first frame update
     void Start()
     {
         Civillians.GetComponent<CivillianScript>().Player = this.Player;
+        Civillians.GetComponent<CivillianScript>().Manager = this;
         Spawns = new List<Vector3>();
        
         SpawnMines(10);
@@ -29,6 +33,15 @@ public class GameManager : MonoBehaviour
         if (GameOver)
         {
             Debug.Log("Game Over!");
+            SceneManager.LoadScene("GameOver");
+        }
+        GameObject civsLeft = GameObject.FindWithTag("Civillian");
+        if (civsLeft == null && civSaved == true)
+        {
+            SceneManager.LoadScene("Win");
+        }
+        else if (civsLeft == null && civSaved == false)
+        {
             SceneManager.LoadScene("GameOver");
         }
     }

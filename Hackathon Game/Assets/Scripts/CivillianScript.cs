@@ -11,6 +11,8 @@ public class CivillianScript : MonoBehaviour
     public float FollowPlayerDistance;
     public GameObject Player;
     public Sprite AwakeSprite;
+    private Vector3 ExtractionPoint = new Vector3(13, 5, -1);
+    public GameManager Manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,11 @@ public class CivillianScript : MonoBehaviour
             Vector3 VectorToPlayer = PlayerPos - CurrentPos;
             VectorToPlayer.z = -1;
             CurrentPos.z = -1;
+            if (CurrentPos.x >13 && CurrentPos.y >5)
+            {
+                Manager.civSaved = true;
+                Destroy(this.gameObject);
+            }
             if (VectorToPlayer.magnitude < FollowPlayerDistance)
             {
                 if (VectorToPlayer.magnitude > 2)
