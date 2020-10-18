@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b323ee3ea6b27a42841940cc7236799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneStart: {fileID: 0}
-  droneEnd: {fileID: 0}
+  droneStart: {fileID: 8300000, guid: 6ab037fccb9935642a064fed1ea64292, type: 3}
+  droneEnd: {fileID: 8300000, guid: e7aef3d97f8e5174b9f8ad3d7f30eda6, type: 3}
   Speed: 5
   Direction: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &4838003428791125407
