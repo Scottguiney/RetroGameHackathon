@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Civillian
   - Drone
+  - Mine
   layers:
   - Default
   - TransparentFX

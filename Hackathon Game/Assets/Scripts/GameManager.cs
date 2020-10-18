@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private bool GameOver = false;
     private bool Spawnable = false;
     public bool civSaved = false;
-   
+
 
     // Start is called before the first frame update
     void Start()
@@ -126,4 +126,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    
 }
