@@ -22,11 +22,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 CurrentPos = this.transform.position;
         Vector3Int cell = Tilemap.WorldToCell(transform.position);
-        if (Input.GetKey("a")&& CurrentPos.x > -12.5)
+        if (Input.GetKey("a")&& CurrentPos.x > -14.5)
         {
-            this.transform.position = new Vector2(CurrentPos.x - moveSpeed * Time.deltaTime, CurrentPos.y);
+            
    
             this.transform.rotation = new Quaternion(0, 0, 0.7071068f, 0.7071068f);
+            this.transform.position = new Vector3(CurrentPos.x - moveSpeed * Time.deltaTime, CurrentPos.y, -1);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandTrack)
@@ -43,10 +44,11 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (Input.GetKey("d") && CurrentPos.x < 12.3)
+        if (Input.GetKey("d") && CurrentPos.x < 14.3)
         {
-            this.transform.position = new Vector2(CurrentPos.x + moveSpeed * Time.deltaTime, CurrentPos.y);
+            
             this.transform.rotation = new Quaternion(0, 0, 0.7071068f, -0.7071068f);
+            this.transform.position = new Vector3(CurrentPos.x + moveSpeed * Time.deltaTime, CurrentPos.y, -1);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandTrack)
@@ -65,8 +67,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("w") &&CurrentPos.y<6.3)
         {
-            this.transform.position = new Vector2(CurrentPos.x, CurrentPos.y + moveSpeed * Time.deltaTime);
+            
             this.transform.rotation = new Quaternion(0, 0, 0, 1);
+            this.transform.position = new Vector3(CurrentPos.x, CurrentPos.y + moveSpeed * Time.deltaTime, -1);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandSide)
@@ -84,8 +87,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("s")&&CurrentPos.y >-6.4)
         {
-            this.transform.position = new Vector2(CurrentPos.x, CurrentPos.y - moveSpeed * Time.deltaTime);
+           
             this.transform.rotation = new Quaternion(0, 0, 1, 0);
+            this.transform.position = new Vector3(CurrentPos.x, CurrentPos.y - moveSpeed * Time.deltaTime, -1);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandSide)

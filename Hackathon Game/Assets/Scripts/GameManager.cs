@@ -10,13 +10,16 @@ public class GameManager : MonoBehaviour
     public GameObject Mines;
     public GameObject Civillians;
     public GameObject Player;
-    private List<Vector3> Spawns = new List<Vector3>();
+    private List<Vector3> Spawns;
     private bool GameOver = false;
+    private bool Spawnable = false;
     // Start is called before the first frame update
     void Start()
     {
- 
-        SpawnMines(15);
+        Civillians.GetComponent<CivillianScript>().Player = this.Player;
+        Spawns = new List<Vector3>();
+       
+        SpawnMines(10);
         SpawnCivillians(3);
     }
 
@@ -38,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     private void SpawnMines(float NumberOfMines)
     {
+        UnityEngine.Random.seed = System.DateTime.Now.Millisecond;
+        GameObject mine;
         for (int i = 0; i < NumberOfMines; i++)
         {
             bool LocationSpawned = false;
@@ -51,17 +56,30 @@ public class GameManager : MonoBehaviour
                     if (SpawnLocation == item)
                     {
                         LocationSpawned = true;
+                        Spawnable = false;
+                        break;
+                     
+                    }
+                    else
+                    {
+                        Spawnable = true;
                     }
                 }
+                if (Spawnable)
+                {
+                    LocationSpawned = false;
+                }
+
             } while (LocationSpawned);
             Spawns.Add(SpawnLocation);
-            Instantiate(Mines, SpawnLocation, Quaternion.identity);
+            mine = Instantiate(Mines, SpawnLocation, Quaternion.identity);
         }
     }
 
     private void SpawnCivillians(float NumberOfCivillians)
     {
-        Civillians.GetComponent<CivillianScript>().Player = this.Player;
+        UnityEngine.Random.seed = System.DateTime.Now.Millisecond;
+        GameObject civ;
         for (int i = 0; i < NumberOfCivillians; i++)
         {
             bool LocationSpawned = false;
@@ -75,12 +93,23 @@ public class GameManager : MonoBehaviour
                     if (SpawnLocation == item)
                     {
                         LocationSpawned = true;
+                        Spawnable = false;
+                        break;
+                        
+                    }
+                    else
+                    {
+                        Spawnable = true;
                     }
                 }
+                if (Spawnable)
+                {
+                    LocationSpawned = false;
+                }
+                
             } while (LocationSpawned);
             Spawns.Add(SpawnLocation);
-            Instantiate(Civillians, SpawnLocation, Quaternion.identity);
-
+            civ = Instantiate(Civillians, SpawnLocation, Quaternion.identity);
         }
     }
 

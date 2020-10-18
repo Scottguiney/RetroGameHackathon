@@ -5,7 +5,9 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Mines: {fileID: 8352671287115630343, guid: e0204bcea1ef07049bb168f52cba3927, type: 3}
-  - Civillians: {instanceID: 0}
+  - Civillians: {fileID: 5698027394019480693, guid: 39531b56dd3e8f947981bb98a8889921,
+      type: 3}
+  - Player: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
