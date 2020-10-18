@@ -121,9 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c438d6758d5d9624bbf137582022669d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Drone: {fileID: 764096286108599868, guid: def15f7187b001548af5ea32ac8cf5f8, type: 3}
   sandCross: {fileID: 11400000, guid: b3b8835023abbd348b7b6d9391343296, type: 2}
   sandTrack: {fileID: 11400000, guid: 9addff9c6748461498a4e7ef2620350f, type: 2}
   sandSide: {fileID: 11400000, guid: 5478167107e98ce47be9eb70dbd280f3, type: 2}
   Tilemap: {fileID: 0}
   currentCell: {x: 0, y: 0, z: 0}
+  Drones: 3
   moveSpeed: 10

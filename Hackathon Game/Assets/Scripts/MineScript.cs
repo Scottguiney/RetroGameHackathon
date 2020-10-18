@@ -25,13 +25,14 @@ public class MineScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-            Destroy(this);
+            Destroy(this.gameObject);
             manager.SetGameOver(true);
         }
-        else if (collision.gameObject.tag == "Civillian")
+        else if (collision.gameObject.tag == "Civillian" || collision.gameObject.tag == "Drone")
         {
             Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
-        Destroy(this);
+        
     }
 }

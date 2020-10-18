@@ -5,11 +5,13 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject Drone;
     public Tile sandCross;
     public Tile sandTrack;
     public Tile sandSide;
     public Tilemap Tilemap;
     public Vector3Int currentCell;
+    public float Drones = 3;
     public float moveSpeed = 5;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 CurrentPos = this.transform.position;
         Vector3Int cell = Tilemap.WorldToCell(transform.position);
+        if (Input.GetKeyDown("q") && Drones > 0)
+        {
+            GameObject newDrone = Instantiate(Drone, new Vector3(CurrentPos.x, CurrentPos.y, -1), Quaternion.identity);
+            newDrone.GetComponent<DroneScript>().Direction = new Quaternion(this.transform.rotation.x, this.transform.rotation.y, this.transform.rotation.z, this.transform.rotation.w);
+            Drones--;
+        }
         if (Input.GetKey("a")&& CurrentPos.x > -14.5)
         {
             
