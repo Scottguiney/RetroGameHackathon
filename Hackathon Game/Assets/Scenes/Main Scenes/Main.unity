@@ -268,7 +268,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720343489
 GameObject:
@@ -4240,7 +4240,7 @@ PrefabInstance:
     - target: {fileID: 8352671287115630340, guid: e0204bcea1ef07049bb168f52cba3927,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8352671287115630340, guid: e0204bcea1ef07049bb168f52cba3927,
         type: 3}
@@ -4294,7 +4294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mines: {fileID: 8352671287115630343, guid: e0204bcea1ef07049bb168f52cba3927, type: 3}
-  Civillians: {fileID: 0}
+  Civillians: {fileID: 5698027394019480693, guid: 39531b56dd3e8f947981bb98a8889921,
+    type: 3}
+  Player: {fileID: 111253699}
 --- !u!4 &1023488956
 Transform:
   m_ObjectHideFlags: 0
@@ -4307,7 +4309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1083176965
 GameObject:
@@ -4388,7 +4390,7 @@ Transform:
   m_LocalScale: {x: 26.000542, y: 14.054433, z: 10.783}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481265894
 GameObject:
@@ -4515,5 +4517,5 @@ Transform:
   m_Children:
   - {fileID: 720343490}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

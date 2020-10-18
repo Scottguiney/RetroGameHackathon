@@ -4349,6 +4349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9aafe02225e2d7479d935c5b818b7d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mines: {fileID: 8352671287115630343, guid: e0204bcea1ef07049bb168f52cba3927, type: 3}
+  Civillians: {fileID: 5698027394019480693, guid: 39531b56dd3e8f947981bb98a8889921,
+    type: 3}
+  Player: {fileID: 333065602}
 --- !u!4 &617026284
 Transform:
   m_ObjectHideFlags: 0

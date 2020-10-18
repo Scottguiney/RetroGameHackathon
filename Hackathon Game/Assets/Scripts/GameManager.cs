@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawns.Add(Player.transform.position);
+ 
         SpawnMines(15);
         SpawnCivillians(3);
     }
