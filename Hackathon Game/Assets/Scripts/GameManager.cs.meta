@@ -3,7 +3,9 @@ guid: b9aafe02225e2d7479d935c5b818b7d3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Mines: {fileID: 8352671287115630343, guid: e0204bcea1ef07049bb168f52cba3927, type: 3}
+  - Civillians: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
