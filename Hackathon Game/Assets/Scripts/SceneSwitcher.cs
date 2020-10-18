@@ -15,4 +15,8 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void GoToInstruction()
+    {
+        SceneManager.LoadScene("HowPlay");
+    }
 }
