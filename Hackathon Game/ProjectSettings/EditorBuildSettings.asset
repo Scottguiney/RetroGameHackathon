@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScottSweep.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: f6e67ccb735c0674a94389d59a4f21cf
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 836d08a4857623541aa4b56ec17ae8b1
   m_configObjects: {}
