@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("a")&& CurrentPos.x > -12.5)
         {
             this.transform.position = new Vector2(CurrentPos.x - moveSpeed * Time.deltaTime, CurrentPos.y);
-
+   
+            this.transform.rotation = new Quaternion(0, 0, 0.7071068f, 0.7071068f);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandTrack)
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("d") && CurrentPos.x < 12.3)
         {
             this.transform.position = new Vector2(CurrentPos.x + moveSpeed * Time.deltaTime, CurrentPos.y);
+            this.transform.rotation = new Quaternion(0, 0, 0.7071068f, -0.7071068f);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandTrack)
@@ -64,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("w") &&CurrentPos.y<6.3)
         {
             this.transform.position = new Vector2(CurrentPos.x, CurrentPos.y + moveSpeed * Time.deltaTime);
+            this.transform.rotation = new Quaternion(0, 0, 0, 1);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandSide)
@@ -82,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("s")&&CurrentPos.y >-6.4)
         {
             this.transform.position = new Vector2(CurrentPos.x, CurrentPos.y - moveSpeed * Time.deltaTime);
+            this.transform.rotation = new Quaternion(0, 0, 1, 0);
             if (currentCell != cell)
             {
                 if (Tilemap.GetTile(cell) == sandSide)
